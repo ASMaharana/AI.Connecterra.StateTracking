@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EventStore\StoredProcedure\sp_appendtostream.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="EventStore\StoredProcedure\sp_appendtostream.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.12.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Connecterra.StateTracking.Common\Connecterra.StateTracking.Common.csproj" />
+  </ItemGroup>
+
+</Project>
